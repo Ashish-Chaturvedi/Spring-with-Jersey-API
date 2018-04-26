@@ -6,14 +6,16 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 
 
-//@Api(value="/helloworld")
+@Api(value="/helloworld")
 @Path("/helloworld")
 public class HelloWorld {
 
 	@GET
+	@ApiOperation(value = "Get specific admin", httpMethod = "GET", notes = "Fetch the admin user details")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String sayPlainTextHello() {
 		return "Hello World RESTful Jersey!";
