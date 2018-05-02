@@ -14,5 +14,7 @@ public class ApplicationContextApi extends ResourceConfig {
 		register(RequestContextFilter.class);
 		register(Registration.class);
 		register(RegistrationServiceImpl.class);
-		register(RegistrationDAOImpl.class);}
+		register(RegistrationDAOImpl.class);
+		
+	}
 }
