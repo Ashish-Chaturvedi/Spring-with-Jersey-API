@@ -9,7 +9,14 @@
   http://www.springframework.org/schema/context/spring-context.xsd"
         >
  
-<bean id="registerUser" class="com.fuseIn.IserviceImpl.RegistrationImpl"/>
+<bean id="registerUserBo" class="com.fuseIn.Impl.RegistrationServiceImpl">
+<property name="registerUserDao" ref="registerUserDao"></property> 
+</bean>
+
+<bean id="registerUserDao" class="com.fuseIn.Impl.RegistrationDAOImpl">
+	 
+</bean>
+
     
 </beans>
 

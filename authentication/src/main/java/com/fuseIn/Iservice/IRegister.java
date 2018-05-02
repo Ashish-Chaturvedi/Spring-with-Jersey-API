@@ -1,5 +1,7 @@
 package com.fuseIn.Iservice;
 
+import com.fiseIn.bo.RegisterUserBO;
+
 public interface IRegister {
-	public void create(String text);
+	public void create(RegisterUserBO text);
 }

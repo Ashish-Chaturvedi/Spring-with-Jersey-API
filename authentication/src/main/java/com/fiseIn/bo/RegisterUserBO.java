@@ -1,6 +1,8 @@
-package com.fuseIn.entity;
+package com.fiseIn.bo;
 
-public class RegisterUserTO {
+import com.fuseIn.entity.Address;
+
+public class RegisterUserBO {
 	
 	private String firstName;
 	private String lastName;
