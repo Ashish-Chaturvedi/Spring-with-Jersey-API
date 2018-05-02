@@ -27,7 +27,6 @@ public class RegistrationServiceImpl implements IRegister{
 		userDao.setGender(userBo.getGender());
 		userDao.setInterest(userBo.getInterest());
 		
-		System.out.println("Service: " +userBo.getFirstName());
 		registerUserDao.create(userDao);
 	}
 	
