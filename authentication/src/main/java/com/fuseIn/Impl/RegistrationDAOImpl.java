@@ -7,6 +7,5 @@ public class RegistrationDAOImpl implements IRegisterDao{
 
 	public void create(RegisterUserDAO userDao) {
 		
-		System.out.println("DAO: " + userDao.getFirstName());
 	}
 }
