@@ -1,19 +1,25 @@
-package com.fuseIn.entity;
+package com.fuseIn.bo;
 
-import java.util.List;
+import com.fuseIn.entity.Address;
 
-public class RegisterUserTO {
+public class RegisterUserBO {
 	
 	private String firstName;
 	private String lastName;
 	private String contact;
-	private List<Address> address;
+	private Address address;
 	private String age;
 	private String gender;
 	private String interest;
 	private String email;
 	
 	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public String getEmail() {
 		return email;
 	}
@@ -37,12 +43,6 @@ public class RegisterUserTO {
 	}
 	public void setContact(String contact) {
 		this.contact = contact;
-	}
-	public List<Address> getAddress() {
-		return address;
-	}
-	public void setAddress(List<Address> address) {
-		this.address = address;
 	}
 	public String getAge() {
 		return age;
