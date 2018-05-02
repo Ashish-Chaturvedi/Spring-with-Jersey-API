@@ -3,9 +3,9 @@ package com.fuseIn.Impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.fiseIn.bo.RegisterUserBO;
 import com.fuseIn.Iservice.IRegister;
 import com.fuseIn.Iservice.IRegisterDao;
+import com.fuseIn.bo.RegisterUserBO;
 import com.fuseIn.dao.RegisterUserDAO;
 
 @Service

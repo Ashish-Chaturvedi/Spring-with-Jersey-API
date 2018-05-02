@@ -8,8 +8,8 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.fiseIn.bo.RegisterUserBO;
 import com.fuseIn.Iservice.IRegister;
+import com.fuseIn.bo.RegisterUserBO;
 import com.fuseIn.dto.RegisterUserTO;
 
 import io.swagger.annotations.Api;

@@ -1,4 +1,4 @@
-package com.fiseIn.bo;
+package com.fuseIn.bo;
 
 import com.fuseIn.entity.Address;
 
