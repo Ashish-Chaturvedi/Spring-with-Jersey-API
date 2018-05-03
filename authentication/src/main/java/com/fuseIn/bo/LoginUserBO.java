@@ -1,8 +1,10 @@
 package com.fuseIn.bo;
 
 public class LoginUserBO {
+	
 	private String email;
 	private String password;
+	
 	public String getEmail() {
 		return email;
 	}

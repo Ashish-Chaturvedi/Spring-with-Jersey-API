@@ -21,12 +21,14 @@ public class LoginServiceImpl implements ILogin{
 		
 		loginUserDao.create(userDao);
 	}
-	
+
 	public ILoginDAO getLoginUserDao() {
 		return loginUserDao;
 	}
 
-	public void setRegisterUserDao(ILoginDAO loginUserDao) {
+	public void setLoginUserDao(ILoginDAO loginUserDao) {
 		this.loginUserDao = loginUserDao;
 	}
+
+	
 }

@@ -1,4 +1,4 @@
-package com.fuseIn.Impl;
+package com.fuseIn.daoImpl;
 
 import com.fuseIn.Iservice.ILoginDAO;
 import com.fuseIn.dao.LoginUserDAO;

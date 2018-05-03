@@ -11,9 +11,13 @@
 		<property name="registerUserDao" ref="registerUserDao"></property>
 	</bean>
 
-	<bean id="registerUserDao" class="com.fuseIn.Impl.RegistrationDAOImpl">
+	<bean id="registerUserDao" class="com.fuseIn.daoImpl.RegistrationDAOImpl">
 	</bean>
 
-
+	<bean id="loginUserBo" class="com.fuseIn.Impl.LoginServiceImpl">
+		<property name="loginUserDao" ref="loginUserDao"></property>
+	</bean>
+	
+	<bean id="loginUserDao" class="com.fuseIn.daoImpl.LoginDAOImpl"/>
 </beans>
 

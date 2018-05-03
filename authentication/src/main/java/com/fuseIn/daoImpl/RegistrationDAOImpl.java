@@ -1,4 +1,4 @@
-package com.fuseIn.Impl;
+package com.fuseIn.daoImpl;
 
 import com.fuseIn.Iservice.IRegisterDao;
 import com.fuseIn.dao.RegisterUserDAO;

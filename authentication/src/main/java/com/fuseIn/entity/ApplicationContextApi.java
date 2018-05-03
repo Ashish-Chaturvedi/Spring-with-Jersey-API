@@ -3,9 +3,9 @@ package com.fuseIn.entity;
 import org.glassfish.jersey.server.ResourceConfig;
 import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
 
-import com.fuseIn.Impl.RegistrationDAOImpl;
 import com.fuseIn.Impl.RegistrationServiceImpl;
 import com.fuseIn.controller.Registration;
+import com.fuseIn.daoImpl.RegistrationDAOImpl;
 
 public class ApplicationContextApi extends ResourceConfig {
 
