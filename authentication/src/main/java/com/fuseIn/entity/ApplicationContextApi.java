@@ -7,14 +7,12 @@ import com.fuseIn.Impl.RegistrationDAOImpl;
 import com.fuseIn.Impl.RegistrationServiceImpl;
 import com.fuseIn.controller.Registration;
 
-
 public class ApplicationContextApi extends ResourceConfig {
  
 	public ApplicationContextApi() {
 		register(RequestContextFilter.class);
 		register(Registration.class);
 		register(RegistrationServiceImpl.class);
-		register(RegistrationDAOImpl.class);
-		
+		register(RegistrationDAOImpl.class);		
 	}
 }
