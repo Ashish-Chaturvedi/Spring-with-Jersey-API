@@ -1,12 +1,14 @@
 package com.fuseIn.Impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.fuseIn.Iservice.ILogin;
 import com.fuseIn.Iservice.ILoginDAO;
 import com.fuseIn.bo.LoginUserBO;
 import com.fuseIn.dao.LoginUserDAO;
 
+@Service
 public class LoginServiceImpl implements ILogin{
 	
 	@Autowired
