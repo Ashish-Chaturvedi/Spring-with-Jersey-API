@@ -2,6 +2,13 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.fuseIn</groupId>
   <artifactId>connection</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.1</version>
   <packaging>war</packaging>
+  <dependencies>
+  	<dependency>
+    	<groupId>com.datastax.cassandra</groupId>
+    	<artifactId>cassandra-driver-core</artifactId>
+    	<version>3.4.0</version>
+  	</dependency>
+  </dependencies>
 </project>
