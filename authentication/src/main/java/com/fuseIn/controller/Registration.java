@@ -6,9 +6,10 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import com.fuseIn.Impl.RegistrationServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.fuseIn.Iservice.IRegister;
 import com.fuseIn.bo.RegisterUserBO;
 import com.fuseIn.dto.RegisterUserDTO;
@@ -28,6 +29,8 @@ public class Registration {
 	
 	protected static final String REGISTER_PATH = "/register";
 	
+	private static Logger logger = LogManager.getLogger();
+	
 	@Autowired
 	private IRegister registerUserBo;
 
@@ -36,7 +39,9 @@ public class Registration {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getRegistrationDetails(
 			@ApiParam(value = "User addition to portal", required = true) RegisterUserDTO userRegistration) {
-
+		
+		logger.info("user registration called");
+		
 		RegisterUserBO userBo = new RegisterUserBO();
 
 		userBo.setFirstName(userRegistration.getFirstName());
