@@ -7,6 +7,7 @@
   http://www.springframework.org/schema/context
   http://www.springframework.org/schema/context/spring-context.xsd">
 
+				<!-- Register Bean Definitions -->
 	<bean id="registerUserBo" class="com.fuseIn.Impl.RegistrationServiceImpl">
 		<property name="registerUserDao" ref="registerUserDao"></property>
 	</bean>
@@ -14,6 +15,7 @@
 	<bean id="registerUserDao" class="com.fuseIn.daoImpl.RegistrationDAOImpl">
 	</bean>
 
+				<!-- Login Bean Definitions -->
 	<bean id="loginUserBo" class="com.fuseIn.Impl.LoginServiceImpl">
 		<property name="loginUserDao" ref="loginUserDao"></property>
 	</bean>

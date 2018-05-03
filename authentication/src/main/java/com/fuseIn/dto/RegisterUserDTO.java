@@ -1,8 +1,12 @@
 package com.fuseIn.dto;
 
 import com.fuseIn.entity.Address;
-
-public class RegisterUserTO {
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
+public class RegisterUserDTO {
 	
 	private String firstName;
 	private String lastName;

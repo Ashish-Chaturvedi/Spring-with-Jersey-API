@@ -1,7 +1,11 @@
 package com.fuseIn.bo;
 
 import com.fuseIn.entity.Address;
-
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
 public class RegisterUserBO {
 	
 	private String firstName;

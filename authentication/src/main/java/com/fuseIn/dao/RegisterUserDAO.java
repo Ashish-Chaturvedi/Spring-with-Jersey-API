@@ -1,7 +1,11 @@
 package com.fuseIn.dao;
 
 import com.fuseIn.entity.Address;
-
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
 public class RegisterUserDAO {
 	
 	private String firstName;

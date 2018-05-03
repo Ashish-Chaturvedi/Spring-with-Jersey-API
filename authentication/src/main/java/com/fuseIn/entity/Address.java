@@ -1,5 +1,9 @@
 package com.fuseIn.entity;
-
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
 public class Address {
 	
 	private String city;

@@ -7,6 +7,11 @@ import com.fuseIn.Iservice.IRegister;
 import com.fuseIn.Iservice.IRegisterDao;
 import com.fuseIn.bo.RegisterUserBO;
 import com.fuseIn.dao.RegisterUserDAO;
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
 
 @Service
 public class RegistrationServiceImpl implements IRegister {

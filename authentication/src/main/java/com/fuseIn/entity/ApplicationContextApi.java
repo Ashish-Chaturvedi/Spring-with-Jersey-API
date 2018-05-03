@@ -6,7 +6,11 @@ import org.glassfish.jersey.server.spring.scope.RequestContextFilter;
 import com.fuseIn.Impl.RegistrationServiceImpl;
 import com.fuseIn.controller.Registration;
 import com.fuseIn.daoImpl.RegistrationDAOImpl;
-
+/*
+ * 
+ * @author AshishChaturvedi
+ * 
+ */
 public class ApplicationContextApi extends ResourceConfig {
 
 	public ApplicationContextApi() {
