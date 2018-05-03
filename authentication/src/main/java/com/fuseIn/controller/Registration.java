@@ -16,21 +16,21 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
-
-@Api(value="/Registration")
+@Api(value = "/Registration")
 @Path("/register")
 public class Registration {
-	
+
 	@Autowired
 	private IRegister registerUserBo;
-	
+
 	@POST
 	@ApiOperation(value = "Submit registration details", httpMethod = "POST", notes = "registration details")
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response getRegistrationDetails(@ApiParam(value = "User addition to portal", required = true) RegisterUserTO userRegistration) {
-		
+	public Response getRegistrationDetails(
+			@ApiParam(value = "User addition to portal", required = true) RegisterUserTO userRegistration) {
+
 		RegisterUserBO userBo = new RegisterUserBO();
-		
+
 		userBo.setFirstName(userRegistration.getFirstName());
 		userBo.setLastName(userRegistration.getLastName());
 		userBo.setGender(userRegistration.getGender());
@@ -39,9 +39,9 @@ public class Registration {
 		userBo.setContact(userRegistration.getContact());
 		userBo.setEmail(userRegistration.getEmail());
 		userBo.setInterest(userRegistration.getInterest());
-		
+
 		registerUserBo.create(userBo);
-		
+
 		return Response.ok().entity(userRegistration).build();
 	}
 }
