@@ -3,6 +3,7 @@ package com.fuseIn.dto;
 public class LoginUserDTO {
 	private String email;
 	private String password;
+	
 	public String getEmail() {
 		return email;
 	}

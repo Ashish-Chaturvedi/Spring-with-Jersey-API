@@ -18,8 +18,10 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @Api(value = "/Login")
-@Path("/login")
+@Path(Login.LOGIN_PATH)
 public class Login {
+	
+	protected static final String LOGIN_PATH = "/login";
 
 	@Autowired
 	private ILogin loginUserBo;

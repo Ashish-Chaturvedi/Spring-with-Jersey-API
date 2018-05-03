@@ -8,6 +8,7 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.fuseIn.Impl.RegistrationServiceImpl;
 import com.fuseIn.Iservice.IRegister;
 import com.fuseIn.bo.RegisterUserBO;
 import com.fuseIn.dto.RegisterUserDTO;
@@ -22,9 +23,11 @@ import io.swagger.annotations.ApiParam;
  */
 
 @Api(value = "/Registration")
-@Path("/register")
+@Path(Registration.REGISTER_PATH)
 public class Registration {
-
+	
+	protected static final String REGISTER_PATH = "/register";
+	
 	@Autowired
 	private IRegister registerUserBo;
 
