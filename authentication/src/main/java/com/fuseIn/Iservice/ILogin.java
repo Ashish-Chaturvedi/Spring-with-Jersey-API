@@ -1,8 +1,8 @@
 package com.fuseIn.Iservice;
 
-import com.fuseIn.bo.LoginUserBO;
+import com.fuseIn.bo.LoginBO;
 
 public interface ILogin {
 	
-	public void create (LoginUserBO text);
+	public void create (LoginBO text);
 }

@@ -1,6 +1,6 @@
 package com.fuseIn.dao;
 
-public class LoginUserDAO {
+public class LoginDAO {
 
 		private String email;
 		private String password;

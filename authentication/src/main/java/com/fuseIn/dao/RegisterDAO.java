@@ -1,4 +1,4 @@
-package com.fuseIn.dto;
+package com.fuseIn.dao;
 
 import com.fuseIn.entity.Address;
 /*
@@ -6,7 +6,7 @@ import com.fuseIn.entity.Address;
  * @author AshishChaturvedi
  * 
  */
-public class RegisterUserDTO {
+public class RegisterDAO {
 	
 	private String firstName;
 	private String lastName;
@@ -16,7 +16,6 @@ public class RegisterUserDTO {
 	private String gender;
 	private String interest;
 	private String email;
-	
 	
 	public Address getAddress() {
 		return address;

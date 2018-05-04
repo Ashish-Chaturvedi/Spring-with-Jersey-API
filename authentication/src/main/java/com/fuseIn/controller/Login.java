@@ -10,8 +10,8 @@ import javax.ws.rs.core.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.fuseIn.Iservice.ILogin;
-import com.fuseIn.bo.LoginUserBO;
-import com.fuseIn.dto.LoginUserDTO;
+import com.fuseIn.bo.LoginBO;
+import com.fuseIn.dto.LoginDTO;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -31,9 +31,9 @@ public class Login {
 	@Produces(MediaType.APPLICATION_JSON)
 	@Consumes(MediaType.APPLICATION_JSON)
 	public Response getLoginDetails(
-			@ApiParam(value = "User logging in", required = true) LoginUserDTO loginUserObject) {
+			@ApiParam(value = "User logging in", required = true) LoginDTO loginUserObject) {
 
-		LoginUserBO userBo = new LoginUserBO();
+		LoginBO userBo = new LoginBO();
 		userBo.setEmail(loginUserObject.getEmail());
 		userBo.setPassword(loginUserObject.getPassword());
 

@@ -2,13 +2,13 @@ package com.fuseIn.daoImpl;
 
 import org.springframework.stereotype.Repository;
 
-import com.fuseIn.Iservice.ILoginDAO;
-import com.fuseIn.dao.LoginUserDAO;
+import com.fuseIn.Iservice.ILoginDao;
+import com.fuseIn.dao.LoginDAO;
 
 @Repository
-public class LoginDAOImpl implements ILoginDAO{
+public class LoginDaoImpl implements ILoginDao{
 
-	public void create(LoginUserDAO userDao) {
+	public void create(LoginDAO userDao) {
 		
 		//System.out.println("DAO: " + userDao.getEmail());
 		

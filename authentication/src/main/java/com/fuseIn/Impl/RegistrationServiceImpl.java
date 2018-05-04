@@ -1,12 +1,18 @@
 package com.fuseIn.Impl;
 
+import java.security.NoSuchAlgorithmException;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fuseIn.Iservice.IRegister;
 import com.fuseIn.Iservice.IRegisterDao;
-import com.fuseIn.bo.RegisterUserBO;
-import com.fuseIn.dao.RegisterUserDAO;
+import com.fuseIn.bo.RegisterBO;
+import com.fuseIn.dao.RegisterDAO;
+import com.fuseIn.util.EncodeCredentials;
 /*
  * 
  * @author AshishChaturvedi
@@ -16,12 +22,15 @@ import com.fuseIn.dao.RegisterUserDAO;
 @Service
 public class RegistrationServiceImpl implements IRegister {
 
+	private static Logger logger = LogManager.getLogger();
+	
 	@Autowired
 	private IRegisterDao registerUserDao;
 
-	public void create(RegisterUserBO userBo) {
-
-		RegisterUserDAO userDao = new RegisterUserDAO();
+	public String create(RegisterBO userBo) {
+		JSONObject encryptedPass = null;
+		
+		RegisterDAO userDao = new RegisterDAO();
 
 		userDao.setFirstName(userBo.getFirstName());
 		userDao.setLastName(userBo.getLastName());
@@ -31,8 +40,16 @@ public class RegistrationServiceImpl implements IRegister {
 		userDao.setContact(userBo.getContact());
 		userDao.setGender(userBo.getGender());
 		userDao.setInterest(userBo.getInterest());
-
-		registerUserDao.create(userDao);
+		
+		try{
+			encryptedPass = new EncodeCredentials().encodePassword(userBo.getPassword());
+		}catch(NoSuchAlgorithmException exception) {
+			logger.error(exception.getMessage());
+		}
+		
+		String check = registerUserDao.create(userDao, encryptedPass);
+		
+		return check;
 	}
 
 	public IRegisterDao getRegisterUserDao() {

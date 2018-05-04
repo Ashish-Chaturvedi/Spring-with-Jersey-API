@@ -1,4 +1,4 @@
-package com.fuseIn.dao;
+package com.fuseIn.bo;
 
 import com.fuseIn.entity.Address;
 /*
@@ -6,7 +6,7 @@ import com.fuseIn.entity.Address;
  * @author AshishChaturvedi
  * 
  */
-public class RegisterUserDAO {
+public class RegisterBO {
 	
 	private String firstName;
 	private String lastName;
@@ -16,6 +16,8 @@ public class RegisterUserDAO {
 	private String gender;
 	private String interest;
 	private String email;
+	private String password;
+	
 	
 	public Address getAddress() {
 		return address;
@@ -64,6 +66,12 @@ public class RegisterUserDAO {
 	}
 	public void setInterest(String interest) {
 		this.interest = interest;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	
 }

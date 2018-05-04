@@ -7,6 +7,15 @@
 	<packaging>war</packaging>
 	<dependencies>
 	
+		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
+<!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20180130</version>
+</dependency>
+
+		
 		<dependency>
 			<groupId>com.fuseIn</groupId>
 			<artifactId>connection</artifactId>

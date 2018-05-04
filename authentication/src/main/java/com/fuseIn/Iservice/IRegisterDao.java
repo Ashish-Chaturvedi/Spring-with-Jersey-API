@@ -1,11 +1,13 @@
 package com.fuseIn.Iservice;
 
-import com.fuseIn.dao.RegisterUserDAO;
+import org.json.JSONObject;
+
+import com.fuseIn.dao.RegisterDAO;
 /*
  * 
  * @author AshishChaturvedi
  * 
  */
 public interface IRegisterDao {
-	public void create(RegisterUserDAO text);
+	public String create(RegisterDAO text, JSONObject encryptedPass);
 }

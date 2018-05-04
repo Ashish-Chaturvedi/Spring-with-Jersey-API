@@ -1,4 +1,4 @@
-package com.fuseIn.bo;
+package com.fuseIn.dto;
 
 import com.fuseIn.entity.Address;
 /*
@@ -6,7 +6,7 @@ import com.fuseIn.entity.Address;
  * @author AshishChaturvedi
  * 
  */
-public class RegisterUserBO {
+public class RegisterDTO {
 	
 	private String firstName;
 	private String lastName;
@@ -16,6 +16,7 @@ public class RegisterUserBO {
 	private String gender;
 	private String interest;
 	private String email;
+	private String password;
 	
 	
 	public Address getAddress() {
@@ -66,5 +67,12 @@ public class RegisterUserBO {
 	public void setInterest(String interest) {
 		this.interest = interest;
 	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	
 }

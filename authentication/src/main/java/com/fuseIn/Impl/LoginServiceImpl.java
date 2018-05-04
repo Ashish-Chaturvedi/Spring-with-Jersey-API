@@ -4,19 +4,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fuseIn.Iservice.ILogin;
-import com.fuseIn.Iservice.ILoginDAO;
-import com.fuseIn.bo.LoginUserBO;
-import com.fuseIn.dao.LoginUserDAO;
+import com.fuseIn.Iservice.ILoginDao;
+import com.fuseIn.bo.LoginBO;
+import com.fuseIn.dao.LoginDAO;
 
 @Service
 public class LoginServiceImpl implements ILogin{
 	
 	@Autowired
-	private ILoginDAO loginUserDao;
+	private ILoginDao loginUserDao;
 
-	public void create(LoginUserBO userBo) {
+	public void create(LoginBO userBo) {
 		
-		LoginUserDAO userDao = new LoginUserDAO();
+		LoginDAO userDao = new LoginDAO();
 		
 		userDao.setEmail(userBo.getEmail());
 		userDao.setPassword(userBo.getPassword());
@@ -24,11 +24,11 @@ public class LoginServiceImpl implements ILogin{
 		loginUserDao.create(userDao);
 	}
 
-	public ILoginDAO getLoginUserDao() {
+	public ILoginDao getLoginUserDao() {
 		return loginUserDao;
 	}
 
-	public void setLoginUserDao(ILoginDAO loginUserDao) {
+	public void setLoginUserDao(ILoginDao loginUserDao) {
 		this.loginUserDao = loginUserDao;
 	}
 

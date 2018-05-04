@@ -1,6 +1,7 @@
-package com.fuseIn.dto;
+package com.fuseIn.bo;
 
-public class LoginUserDTO {
+public class LoginBO {
+	
 	private String email;
 	private String password;
 	

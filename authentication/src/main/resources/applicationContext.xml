@@ -12,7 +12,7 @@
 		<property name="registerUserDao" ref="registerUserDao"></property>
 	</bean>
 
-	<bean id="registerUserDao" class="com.fuseIn.daoImpl.RegistrationDAOImpl">
+	<bean id="registerUserDao" class="com.fuseIn.daoImpl.RegistrationDaoImpl">
 	</bean>
 
 				<!-- Login Bean Definitions -->
@@ -20,6 +20,6 @@
 		<property name="loginUserDao" ref="loginUserDao"></property>
 	</bean>
 	
-	<bean id="loginUserDao" class="com.fuseIn.daoImpl.LoginDAOImpl"/>
+	<bean id="loginUserDao" class="com.fuseIn.daoImpl.LoginDaoImpl"/>
 </beans>
 

@@ -1,8 +1,8 @@
 package com.fuseIn.Iservice;
 
-import com.fuseIn.dao.LoginUserDAO;
+import com.fuseIn.dao.LoginDAO;
 
-public interface ILoginDAO {
+public interface ILoginDao {
 
-	public void create(LoginUserDAO text);
+	public void create(LoginDAO text);
 }

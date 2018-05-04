@@ -1,11 +1,11 @@
 package com.fuseIn.Iservice;
 
-import com.fuseIn.bo.RegisterUserBO;
+import com.fuseIn.bo.RegisterBO;
 /*
  * 
  * @author AshishChaturvedi
  * 
  */
 public interface IRegister {
-	public void create(RegisterUserBO text);
+	public String create(RegisterBO text);
 }
