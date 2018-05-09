@@ -4,6 +4,9 @@
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <dependent-module archiveName="connection-0.0.1.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/connection/connection">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="authentication"/>
         <property name="java-output-path" value="/authentication/target/classes"/>
     </wb-module>

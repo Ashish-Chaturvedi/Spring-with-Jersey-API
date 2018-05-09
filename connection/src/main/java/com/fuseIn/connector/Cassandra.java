@@ -1,25 +1,30 @@
 package com.fuseIn.connector;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.datastax.driver.core.Cluster;
-import com.datastax.driver.core.Host;
 import com.datastax.driver.core.Metadata;
 import com.datastax.driver.core.Session;
 
 public class Cassandra {
-	private Cluster cluster;	//cassandra cluster
 	
-	private Session session;	//cassandra session
-	public void connectDb(String node, int portNumber) throws Exception {
+	private static Logger logger = LogManager.getLogger();
+	
+	private Cluster cluster;
+	
+	private Session session;	
+	
+	public void connectDb(String node) {
 		
-		//https://docs.datastax.com/en/drivers/java/2.1/com/datastax/driver/core/Cluster.Builder.html#addContactPoint-java.lang.String-
-		this.cluster = Cluster.builder().addContactPoint(node).withPort(portNumber).build();
-		
+		try {
+		this.cluster = Cluster.builder().addContactPoint(node).withPort(9042).build();
 		Metadata metadata = cluster.getMetadata();
-		System.out.printf("Connected to cluster: %s\n", metadata.getClusterName());
-		
-		for(Host host : metadata.getAllHosts())
-		{
-			System.out.printf("Datacenter: %s; Host: %s; Rack: %s\n", host.getDatacenter(), host.getRack());
+		logger.info("Connected to cluster: %s\n", metadata.getClusterName());
+		}
+		catch(Exception e) {
+			logger.error(e.getMessage());
+			
 		}
 		session = cluster.connect(); 
 	}
